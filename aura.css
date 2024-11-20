@@ -29,14 +29,15 @@ nav {
     display: flex; 
     align-items: center; 
     justify-content: flex-start; 
-    padding: 0 15px; 
+    padding: 15px; 
+    margin-right: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 15px; 
+    padding: 15px; 
     display: flex; 
     align-items: center;
 }
@@ -190,5 +191,104 @@ footer > p {
     font-family: var(--fontedestaque2);
     text-align: center;
 }
+
+/*-----PAG2-----------*/
+
+#cell {
+    background-image: url(img/img1.jpeg);
+    height: 50vh;
+    background-position: center center;
+    background-size:cover;
+    
+}
+#cell > h1 {
+    margin: auto;
+    font-family: var(--fontedestaque2);
+    color: #fff;
+    font-size: 3.5em;
+    text-align: center;
+    padding: 100px;
+
+}
+
+.about-aura {
+    display: flex;
+    margin: auto;
+    max-width: 900px;
+    justify-content: space-between;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.whay-aura {
+    width: 350px;
+    height: 300px;
+    border-radius: 15px; 
+    padding: 20px; 
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+}
+
+.whay-aura:hover {
+    animation: shadowMovement 3s ease-in-out infinite, moveEffect 5s ease-in-out infinite;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Animação para sombra pulsante */
+@keyframes shadowMovement {
+    0% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Animação para movimento leve */
+@keyframes moveEffect {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.whay-aura h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.whay-aura p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Media query para telas pequenas (mobile) */
+@media (max-width: 768px) {
+    .about-aura {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .whay-aura {
 
 
